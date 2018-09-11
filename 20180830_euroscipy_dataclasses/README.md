@@ -5,3 +5,4 @@ Talk given at [EuroSciPy, Trento, Italy](https://www.euroscipy.org/2018/) on Aug
 - [ [Abstract] ](https://www.euroscipy.org/2018/descriptions/Extending%20Python%203.7s%20Data%20Classes.html)
 - [ [Notebook] ](20180830_dataclasses.ipynb)
 - [ [Video] ](https://youtu.be/dGHIHCzabOM?t=36m55s)
+- [ [Article] ](https://realpython.com/python-data-classes/)

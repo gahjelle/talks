@@ -15,4 +15,5 @@ Here you can find material from some of the things I have presented. Please reac
 
     [ [Abstract] ](https://www.euroscipy.org/2018/descriptions/Extending%20Python%203.7s%20Data%20Classes.html) -
     [ [Notebook] ](20180830_euroscipy_dataclasses/20180830_dataclasses.ipynb) -
-    [ [Video] ](https://youtu.be/dGHIHCzabOM?t=36m55s)
+    [ [Video] ](https://youtu.be/dGHIHCzabOM?t=36m55s) -
+    [ [Article] ](https://realpython.com/python-data-classes/)
