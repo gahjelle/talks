@@ -2,6 +2,14 @@
 
 Here you can find material from some of the things I have presented. Please reach out if you have any questions.
 
+- _May 5, 2019_ **Plug-ins: Adding Flexibility to Your Apps**
+  [PyCon, Cleveland, OH, USA](https://us.pycon.org/2019/)
+
+    [ [Abstract] ](https://us.pycon.org/2019/schedule/presentation/227/) -
+    [ [Slides] ](20190505_pycon_plugins/20190505_plugins.md) -
+    [ [Video] ](https://www.youtube.com/watch?v=98s9YfoXB68)
+
+
 - _Aug 31, 2018_ **Listening to Quasars and Shooting Satellites With Lasers**
   [EuroSciPy, Trento, Italy](https://www.euroscipy.org/2018/)
 
