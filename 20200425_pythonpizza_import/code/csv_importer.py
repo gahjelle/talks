@@ -1,5 +1,6 @@
 import csv
 import pathlib
+import re
 import sys
 from importlib.machinery import ModuleSpec
 
@@ -12,17 +13,14 @@ class CsvImporter:
         self.csv_path = csv_path
 
     @classmethod
-    def find_spec(cls, fullname, path=None, target=None):
-        """Find CSV file in import path"""
+    def find_spec(cls, name, path, target=None):
+        package, _, module_name = name.rpartition(".")
+        csv_file_name = f"{module_name}.csv"
         directories = sys.path if path is None else path
-        file_name = f"{fullname.rpartition('.')[-1]}.csv"
         for directory in directories:
-            csv_path = pathlib.Path(directory) / file_name
+            csv_path = pathlib.Path(directory) / csv_file_name
             if csv_path.exists():
-                return ModuleSpec(fullname, cls(csv_path))
-
-        # No CSV file was found
-        return None
+                return ModuleSpec(name, cls(csv_path))
 
     def create_module(self, spec):
         """Return None to use Python's default module creator"""
@@ -34,7 +32,7 @@ class CsvImporter:
         with self.csv_path.open() as fid:
             rows = csv.DictReader(fid)
             data = list(rows)
-            fieldnames = tuple(rows.fieldnames)
+            fieldnames = tuple(_identifier(f) for f in rows.fieldnames)
 
         # Create a dictionary for each field
         values = zip(*(row.values() for row in data))
@@ -44,6 +42,19 @@ class CsvImporter:
         module.__dict__.update(fields)
         module.__dict__["data"] = data
         module.__dict__["fieldnames"] = fieldnames
+        module.__file__ = str(self.csv_path)
+
+    def __repr__(self):
+        """Nice representation of the class"""
+        return f"{self.__class__.__name__}({str(self.csv_path)!r})"
+
+
+def _identifier(var_str):
+    """Create a valid identifier from a string
+
+    See https://stackoverflow.com/a/3305731
+    """
+    return re.sub(r"\W|^(?=\d)", "_", var_str)
 
 
 # Add CsvImporter as the last finder
