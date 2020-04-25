@@ -15,12 +15,16 @@ Taking advantage of (abusing?) Python's very flexible **import system**, this is
 - [ [Slides] ](20200425_import.md)
 - [ [Code] ](code/)
 
-The slides were presented using [`mdp`](https://github.com/visit1985/mdp). The content of the slides are available below.
-
+The slides were presented using [`mdp`](https://github.com/visit1985/mdp). The content of the slides are available below, adapted to a flat text file.
 
 **Import Anything: Playing with Python's Import System**
 
 Geir Arne Hjelle
+
+> **Disclaimer:**
+>
+> I've been so preoccupied with whether or not I could, I
+> didn’t stop to think if I should.
 
 ---
 
@@ -41,12 +45,16 @@ At a high level, three things happen when you `import` a module:
 The import machinery is exposed in `importlib`. Consider the
 following code:
 
-    >>> import numpy as np
+```
+>>> import numpy as np
+```
 
 Using `importlib`, you can rewrite the import:
 
-    >>> import importlib
-    >>> np = importlib.import_module("numpy")
+```
+>>> import importlib
+>>> np = importlib.import_module("numpy")
+```
 
 Note that `importlib` handles the **finding** (1) and **loading** (2).
 You need to do the **binding** (3) yourself.
@@ -61,15 +69,17 @@ Python always imports whole modules:
 >>> from math import pi as π
 >>> π
 3.141592653589793
-    
+```
+
+```
 >>> math
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'math' is not defined
 ```
 
-The name `math` is not bound, but the whole `math` module
-has been imported.
+The name `math` is **not bound**, but the whole `math` module
+has been **imported**.
 
 ---
 
@@ -82,7 +92,9 @@ all loaded modules:
 >>> from math import pi as π
 >>> π
 3.141592653589793
-    
+```
+
+```
 >>> import sys
 >>> math = sys.modules["math"]
 >>> math.cos(π)
@@ -158,7 +170,9 @@ To use your own finder, add it to `sys.meta_path`:
 
 ```
 >>> sys.meta_path.insert(0, DebugFinder)
-    
+```
+
+```
 >>> import csv
 Importing 'csv'
 Importing 're'
@@ -193,8 +207,8 @@ analogues to `.__new__()` and `.__init__()` for classes.
 
 ### Import CSV Files
 
-This example was originally inspired by **Aleksey Bilogur**'s article
-[Import almost anything in Python](https://blog.quiltdata.com/).
+This example is inspired by **Aleksey Bilogur**'s article
+[Import almost anything in Python](https://blog.quiltdata.com/import-almost-anything-in-python-an-intro-to-module-loaders-and-finders-f5e7b15cda47).
 
 You'll add finders and loaders that can directly import CSV files:
 
@@ -220,11 +234,7 @@ to `sys.meta_path`. You can then `import` CSV files:
 ('Geir Arne', 'Guido', 'Hadley')
     
 >>> people.data[1]
-OrderedDict([
-  ('name', 'Guido'),
-  ('language', 'Python'),
-  ('address', 'USA')
-])
+{'name': 'Guido', 'language': 'Python', 'address': 'USA'}
 ```
 
 ---
@@ -255,14 +265,14 @@ sys.meta_path.append(CsvImporter)
 
 ```
     @classmethod
-    def find_spec(cls, fullname, path=None, target=None):
+    def find_spec(cls, name, path, target=None):
+        package, _, module_name = name.rpartition(".")
+        csv_file_name = f"{module_name}.csv"
         directories = sys.path if path is None else path
-        file_name = f"{fullname.rpartition('.')[-1]}.csv"
         for directory in directories:
-            csv_path = pathlib.Path(directory) / file_name
+            csv_path = pathlib.Path(directory) / csv_file_name
             if csv_path.exists():
-                return ModuleSpec(fullname, cls(csv_path))
-        return None
+                return ModuleSpec(name, cls(csv_path))
 ```
 
 ---
