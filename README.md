@@ -2,6 +2,13 @@
 
 Here you can find material from some of the things I have presented. Please reach out if you have any questions.
 
+- _April 25, 2020_ **Import Anything: Playing with Python's Import System**
+  [Remote Python Pizza 🍕](https://remote.python.pizza/)
+
+    [ [Abstract] ](https://github.com/gahjelle/talks/tree/master/20200425_pythonpizza_import#abstract) -
+    [ [Slides] ](20200425_pythonpizza_import/20200425_import.md) -
+    [ [Code] ](20200425_pythonpizza_import/code/)
+
 - _May 5, 2019_ **Plug-ins: Adding Flexibility to Your Apps**
   [PyCon, Cleveland, OH, USA](https://us.pycon.org/2019/)
 
