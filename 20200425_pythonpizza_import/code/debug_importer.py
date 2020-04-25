@@ -2,7 +2,7 @@ import sys
 
 
 class DebugFinder:
-    """List all modules that are imported"""
+    """List all modules as they are imported"""
 
     @classmethod
     def find_spec(cls, name, path, target=None):
