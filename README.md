@@ -2,6 +2,13 @@
 
 Here you can find material from some of the things I have presented. Please reach out if you have any questions.
 
+- _May, 2020_ **Introduction to Decorators - Power Up Your Python Code**
+  [PyCon Online](https://us.pycon.org/2020/online/)
+
+    [ [Abstract] ](https://us.pycon.org/2020/schedule/presentation/75/) -
+    [ [Video] ](https://youtu.be/T8CQwGIsrx4) -
+    [ [Code] ](https://github.com/gahjelle/decorators_tutorial)
+
 - _April 25, 2020_ **Import Anything: Playing with Python's Import System**
   [Remote Python Pizza 🍕](https://remote.python.pizza/)
 
@@ -23,7 +30,6 @@ Here you can find material from some of the things I have presented. Please reac
     [ [Abstract] ](https://www.euroscipy.org/2018/descriptions/Listening%20to%20Quasars%20and%20Shooting%20Satellites%20With%20Lasers.html) -
     [ [Slides] ](20180831_euroscipy_quasars_and_lasers/20180831_quasars_and_lasers.pdf) -
     [ [Video] ](https://youtu.be/orxj8Dkh9rw?t=28m55s)
-
 
 - _Aug 30, 2018_ **Extending Python 3.7s Data Classes**
   [EuroSciPy, Trento, Italy](https://www.euroscipy.org/2018/)
