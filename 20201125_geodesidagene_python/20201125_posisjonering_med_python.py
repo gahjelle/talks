@@ -7,7 +7,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.6.0
+#       jupytext_version: 1.5.0
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -174,7 +174,7 @@ fylker.crs
 # Vi kan transformere til lengde-bredde:
 
 # %% slideshow={"slide_type": "fragment"}
-fylker.to_crs("epsg:4326").plot(figsize=(6, 6))
+fylker.to_crs(epsg=4326).plot(figsize=(6, 6))
 
 # %% [markdown] slideshow={"slide_type": "fragment"}
 # Etterhvert som Kartverkets transformasjoner blir tilgjengelige gjennom **Proj** vil de også bli tilgjengelige i **Geopandas**.
@@ -198,7 +198,7 @@ import contextily as ctx
 
 ax = (
     fylker.query("FYLKESNUMM > '20'")
-    .to_crs("epsg:3857")
+    .to_crs(epsg=3857)
     .plot(column="FYLKESNUMM", alpha=0.6, figsize=(6, 6))
 )
 ctx.add_basemap(ax)
@@ -215,7 +215,7 @@ holmenkollen
 # %% slideshow={"slide_type": "fragment"}
 kv_norgeibilder = "http://opencache.statkart.no/gatekeeper/gk/gk.open_nib_web_mercator_wmts_v2?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=Nibcache_web_mercator_EUREF89_v2&STYLE=default&FORMAT=image/jpgpng&TILEMATRIXSET=default028mm&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
 
-ax = holmenkollen.to_crs("epsg:3857").plot(alpha=0.3, figsize=(6, 6))
+ax = holmenkollen.to_crs(epsg=3857).plot(alpha=0.3, figsize=(6, 6))
 ctx.add_basemap(ax, source=kv_norgeibilder, zoom=16)
 
 # %% [markdown] slideshow={"slide_type": "subslide"}
@@ -259,6 +259,7 @@ plt.show()
 # RasterIO kan kombineres med polygoner og andre geometrier for å **maskere** dataene.
 
 # %% slideshow={"slide_type": "-"}
+import numpy as np
 from rasterio import mask
 
 stadion, transform = mask.mask(dom, holmenkollen.to_crs("epsg:25832").geometry, crop=True)
@@ -287,7 +288,7 @@ from midgard.data import dataset
 
 dset = dataset.Dataset(num_obs=4)
 dset.add_text("navn", val=list(punkter.keys()))
-dset.add_time("tidspunkt", val=["2020-11-25T11:30:00"] * 4, scale="utc", fmt=" ")
+dset.add_time("tidspunkt", val=["2020-11-25T11:30:00"] * 4, scale="utc", fmt="isot")
 dset.add_position("posisjon", val=np.array([[pkt[0] for pkt in punkter.values()], [pkt[1] for pkt in punkter.values()], [10, 20, 40, 25]]).T, system="llh", time="tidspunkt")
 print(dset)
 
@@ -309,6 +310,7 @@ dset.posisjon.to_system("trs")
 # Tid kan konverteres mellom forskjellige **tidsskalaer** (UTC, TAI, GPS, osv) og **tidsformater** (tekst, Julian Day, Python `datetime`, osv)
 
 # %% slideshow={"slide_type": "-"}
+print(dset.tidspunkt.tai)
 print(dset.tidspunkt.gps.jd)
 
 # %% [markdown] slideshow={"slide_type": "subslide"}

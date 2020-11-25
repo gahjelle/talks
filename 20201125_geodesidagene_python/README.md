@@ -14,6 +14,16 @@ Du kan se eksemplene fra presentasjonen ved å åpne [Notebook-filen](posisjoner
 
 Presentasjonen er også direkte [konvertert](https://jupytext.readthedocs.io/) til en [Pythonfil](posisjonering_med_python.py) som også inneholder informasjon fra presentasjonen som kommentarer.
 
+## Biblioteker
+
+For å kjøre koden selv må du installere de relevante Pythonpakkene. Disse er listet opp i filen [`requirements.in`](requirements.in). Du kan installere alle bibliotekene ved å kjøre:
+
+```
+$ python -m pip install -r requirements.in
+```
+
+Filen [`requirements.txt`](requirements.txt) viser hvilke versjoner av de forskjellige bibliotekene som ble brukt i presentasjonen. Alle bibliotekene er i kontinuerlig utvikling. Det er som regel best å bruke seneste versjon av disse.
+
 ## Datafiler
 
 - **Fylkespolygoner**: Lastet ned fra [GeoNorge](https://kartkatalog.geonorge.no/metadata/6093c8a8-fa80-11e6-bc64-92361f002671). Konvertert fra SOSI til Shape med [SosiCon](https://sosicon.espenandersen.no/).

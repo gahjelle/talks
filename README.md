@@ -4,7 +4,8 @@ Here you can find material from some of the things I have presented. Please reac
 
 - _Nov 25, 2020_ **Positioning With Python (in Norwegian)** [Geodesi- og Hydrografidagene](https://geoforum.no/geodesi-og-hydrografidagene-2020/)
 
-    [ [Slides] ](20201125_geodesidagene_python/20201125_posisjonering_med_python.ipynb) -
+    [ [Information] ](20201125_geodesidagene_python/) -
+    [ [Notebook] ](20201125_geodesidagene_python/20201125_posisjonering_med_python.ipynb) -
     [ [Code] ](20201125_geodesidagene_python/20201125_posisjonering_med_python.py)
 
 - _May, 2020_ **Introduction to Decorators - Power Up Your Python Code**
