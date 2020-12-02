@@ -5,8 +5,8 @@ Presentasjon gitt på onlinekonferansen [Geodesi- og Hydrografidagene 2020](http
 
 ## Presentasjon
 
-- [ [Presentasjon] ](posisjonering_med_python.ipynb)
-- [ [Kode] ](posisjonering_med_python.py)
+- [ [Presentasjon] ](20201125_posisjonering_med_python.ipynb)
+- [ [Kode] ](20201125_posisjonering_med_python.py)
 
 Presentasjonen ble gjort i en [Jupyter Notebook](https://jupyter.org/) med utvidelsen [RISE](https://rise.readthedocs.io/) som gir muligheten for å gjøre presentasjoner med kjørende kode.
 
