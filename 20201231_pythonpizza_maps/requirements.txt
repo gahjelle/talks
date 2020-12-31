@@ -1,0 +1,8 @@
+contextily
+folium
+descartes
+geopandas
+jupyter
+jupytext
+matplotlib
+RISE

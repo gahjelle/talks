@@ -2,6 +2,13 @@
 
 Here you can find material from some of the things I have presented. Please reach out if you have any questions.
 
+- _December 31, 2020_ **🗺️ Maps, Maps, Maps!! 🗺️**
+  [Python Pizza 🍕 New Year's Party](https://hamburg.python.pizza/)
+
+    [ [Abstract] ](https://github.com/gahjelle/talks/tree/master/20201231_pythonpizza_maps#abstract) -
+    [ [Slides] ](20201231_pythonpizza_maps/maps_maps_maps.ipynb) -
+    [ [Code] ](20201231_pythonpizza_maps/maps_maps_maps.py)
+
 - _Nov 25, 2020_ **Positioning With Python (in Norwegian)** [Geodesi- og Hydrografidagene](https://geoforum.no/geodesi-og-hydrografidagene-2020/)
 
     [ [Information] ](20201125_geodesidagene_python/) -
