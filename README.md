@@ -27,6 +27,7 @@ Here you can find material from some of the things I have presented. Please reac
 
     [ [Abstract] ](https://github.com/gahjelle/talks/tree/master/20200425_pythonpizza_import#abstract) -
     [ [Slides] ](20200425_pythonpizza_import/20200425_import.md) -
+    [ [Video] ](https://www.youtube.com/watch?v=c295s11XCVo&t=11785s) -
     [ [Code] ](20200425_pythonpizza_import/code/)
 
 - _May 5, 2019_ **Plug-ins: Adding Flexibility to Your Apps**

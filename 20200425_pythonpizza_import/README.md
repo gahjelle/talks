@@ -13,9 +13,11 @@ Taking advantage of (abusing?) Python's very flexible **import system**, this is
 ## Presentation
 
 - [ [Slides] ](20200425_import.md)
+- [ [Video] ](https://www.youtube.com/watch?v=c295s11XCVo&t=11785s)
 - [ [Code] ](code/)
 
-The slides were presented using [`mdp`](https://github.com/visit1985/mdp). The content of the slides are available below, adapted to a flat text file.
+The slides were presented using [`mdp`](https://github.com/visit1985/mdp). The content of the slides is available below, adapted to a flat Markdown file.
+
 
 **Import Anything: Playing with Python's Import System**
 
