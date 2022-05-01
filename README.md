@@ -2,6 +2,11 @@
 
 Here you can find material from some of the things I have presented. Please reach out if you have any questions.
 
+- _May 1, 2022_ **Lightning Talk: Reading PEPs**
+  [PyCon, Salt Lake City, UT, USA](https://us.pycon.org/2022/)
+
+    [ [Slides] ](20220501_pycon_peps/)
+
 - _December 31, 2020_ **🗺️ Maps, Maps, Maps!! 🗺️**
   [Python Pizza 🍕 New Year's Party](https://hamburg.python.pizza/)
 
