@@ -3,6 +3,7 @@
 Lightning talk given at [PyCon US, Salt Lake City, UT, USA](https://us.pycon.org/2022/) on May 1, 2022
 
 - [ [Slides] ](20220501_peps.md)
+- [ [Video] ](https://youtu.be/tF5SD-JlGo4?t=16m22s)
 
 The slides were presented using [`mdp`](https://github.com/visit1985/mdp). The content of the slides are available below.
 
