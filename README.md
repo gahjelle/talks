@@ -2,6 +2,13 @@
 
 Here you can find material from some of the things I have presented. Please reach out if you have any questions.
 
+- _Nov 16, 2022_ **Advent of Code (in Norwegian)** [Fosseprog](https://www.meetup.com/fosseprog/)
+
+    [ [Information] ](20221116_fosseprog_advent-of-code/) -
+    [ [Slides] ](20221116_fosseprog_advent-of-code/20221116_aoc_no.md) -
+    [ [Slides (English)] ](20221116_fosseprog_advent-of-code/20221116_aoc_en.md) -
+    [ [Code Livebook] ](20221116_fosseprog_advent-of-code/aoc202101.livemd)
+
 - _May 1, 2022_ **Lightning Talk: Reading PEPs**
   [PyCon, Salt Lake City, UT, USA](https://us.pycon.org/2022/)
 

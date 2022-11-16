@@ -1,0 +1,47 @@
+# Advent of Code: Day 1, 2021
+
+```elixir
+Mix.install([
+  {:kino, "~> 0.7.0"}
+])
+```
+
+## Parse Input
+
+```elixir
+input = Kino.Input.textarea("Input file:")
+```
+
+## Part 1
+
+```elixir
+input
+|> Kino.Input.read()
+|> String.split("\n", trim: true)
+|> Enum.map(&String.to_integer/1)
+|> Enum.chunk_every(2, 1, :discard)
+|> Enum.count(fn [left, right] -> left < right end)
+```
+
+## Part 2
+
+```elixir
+input
+|> Kino.Input.read()
+|> String.split("\n", trim: true)
+|> Enum.map(&String.to_integer/1)
+|> Enum.chunk_every(3, 1, :discard)
+|> Enum.chunk_every(2, 1, :discard)
+|> Enum.count(fn [left, right] -> Enum.sum(left) < Enum.sum(right) end)
+```
+
+For a small improvement, we can note that we actually don't need to do any sums. When comparing two adjacent sums, say $A = A_1 + A_2 + A_3$ and $B = B_1 + B_2 + B_3$ then $A_2 = B_1$ and $A_3 = B_2$. It follows that $A < B$ if, and only if $A_1 < B_3$.
+
+```elixir
+input
+|> Kino.Input.read()
+|> String.split("\n", trim: true)
+|> Enum.map(&String.to_integer/1)
+|> Enum.chunk_every(4, 1, :discard)
+|> Enum.count(fn [left, _, _, right] -> left < right end)
+```
