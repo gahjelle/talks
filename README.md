@@ -2,6 +2,14 @@
 
 Here you can find material from some of the things I have presented. Please reach out if you have any questions.
 
+- _December 2, 2022_ **🗺️ Maps, Maps, Maps!! 🗺️**
+  [Pydata Global](https://pydata.org/global2022/)
+
+    [ [Information] ](20221202_pydataglobal_maps/) -
+    [ [Abstract] ](https://global2022.pydata.org/cfp/talk/GLJX3M/) -
+    [ [Slides] ](20221202_pydataglobal_maps/maps_maps_maps.ipynb) -
+    [ [Code] ](20221202_pydataglobal_maps/maps_maps_maps.py)
+
 - _Nov 16, 2022_ **Advent of Code (in Norwegian)** [Fosseprog](https://www.meetup.com/fosseprog/)
 
     [ [Information] ](20221116_fosseprog_advent-of-code/) -

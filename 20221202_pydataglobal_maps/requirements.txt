@@ -1,0 +1,12 @@
+contextily
+folium
+descartes
+geopandas
+jupyter
+jupyterlab
+jupytext
+mapclassify
+matplotlib
+pyproj
+rasterio
+RISE
