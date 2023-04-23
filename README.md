@@ -7,6 +7,7 @@ Here you can find material from some of the things I have presented. Please reac
 
     [ [Information] ](20221202_pydataglobal_maps/) -
     [ [Abstract] ](https://global2022.pydata.org/cfp/talk/GLJX3M/) -
+    [ [Video] ](https://www.youtube.com/watch?v=e-xxX-uelfw) -
     [ [Slides] ](20221202_pydataglobal_maps/maps_maps_maps.ipynb) -
     [ [Code] ](20221202_pydataglobal_maps/maps_maps_maps.py)
 

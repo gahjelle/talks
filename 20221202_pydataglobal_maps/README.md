@@ -1,7 +1,6 @@
 # 🗺️ Maps, Maps, Maps!! 🗺️
 
-Talk given at [Pydata Global](https://pydata.org/global2022/) on December 2, 2022
-
+Talk given at [Pydata Global](https://pydata.org/global2022/) on December 2, 2022.
 
 ## Abstract
 
@@ -9,6 +8,7 @@ Everything happens somewhere! Putting your data on maps brings great insights. T
 
 ## Presentation
 
+- [ [Video] ](https://www.youtube.com/watch?v=e-xxX-uelfw)
 - [ [Slides] ](maps_maps_maps.ipynb)
 - [ [Code] ](maps_maps_maps.py)
 
